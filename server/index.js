@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: true,
   credentials: true
 }));
 
@@ -27,19 +27,19 @@ app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/user", userRoutes);
 
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 mongoose
   .connect(process.env.DB)
   .then(() => {
     console.log("DB Connected");
-
-    const PORT = process.env.PORT || 3000;
-    app.listen(PORT, () =>
-      console.log(`Server running on port ${PORT}`)
-    );
+    console.log("CONNECTED DATABASE:", mongoose.connection.name);
   })
-  .catch(err => console.error(err));
-
-  mongoose.connection.once("open", () => {
-  console.log("CONNECTED DATABASE:", mongoose.connection.name);
-});
+  .catch((err) => {
+    console.error("MongoDB connection error:", err);
+  });
 
