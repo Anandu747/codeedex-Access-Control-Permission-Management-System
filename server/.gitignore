@@ -1,0 +1,14 @@
+# Environment variables
+.env
+server/.env
+client/.env
+
+# Node
+node_modules/
+
+# Frontend build
+client/dist/
+client/build/
+
+# Logs
+*.log

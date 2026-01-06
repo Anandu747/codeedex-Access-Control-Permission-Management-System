@@ -1,0 +1,115 @@
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- GLOBAL THEME ---------- */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- LAYOUT ---------- */
+.page-container {
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  background-color: #1e1e1e;
+  padding: 24px;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+/* ---------- HEADINGS ---------- */
+.page-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+/* ---------- TEXT ---------- */
+.info-text {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.label {
+  font-weight: bold;
+  color: #4ade80;
+}
+
+/* ---------- BUTTON ---------- */
+.btn {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #4ade80;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ---------- ERROR ---------- */
+.error {
+  color: #f87171;
+  padding: 40px;
+}
+
+/* ---------- LOGIN ---------- */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  background-color: #1e1e1e;
+  padding: 32px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4ade80;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+
+.login-error {
+  color: #f87171;
+  margin-top: 12px;
+  font-size: 14px;
+}
